@@ -65,7 +65,7 @@ class A:
 
 
 	def request(self):
-		file = open(self.file, "r")
+		file = open(self.file, 'r')
 		# Reads the content of a file block by block
 		while True:
 			text = file.read(FILE_BLOCK_SIZE)
@@ -140,7 +140,7 @@ class B:
 
 # Checks for arguments validity
 if (len(sys.argv) != 3):
-	print('Invalid usage: type `python program {file} (ECB|CBC)`')
+	print(f'Invalid usage: type `python3 {sys.argv[0]} (file) (ECB|CBC)`')
 	exit(1)
 
 if (sys.argv[2] not in {'CBC', 'ECB'}):
